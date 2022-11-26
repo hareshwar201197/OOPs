@@ -1,0 +1,22 @@
+class array:
+    def __init__(self,fix_size):
+        self.fix_size=fix_size
+        self.lenght=0
+        self.data=[]
+    
+    def add(self,element):
+        if self.lenght<self.fix_size:
+            self.data.append(element)
+            self.lenght +=1
+        else:
+            print("Array is full")
+
+    def remove(self,index):
+        del self.data[index]
+
+obj=array(2)
+obj.add(10)
+obj.add(20)
+obj.add(30)
+print(obj.data)
+
